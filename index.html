@@ -1,0 +1,453 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Deepansh Maheshwari | Portfolio</title>
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    
+    <!-- Google Fonts (Inter) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <style>
+        /* Custom styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #111111;
+            color: #e5e7eb; /* gray-200 */
+        }
+        /* Style for the underline on section titles */
+        .title-underline {
+            position: absolute;
+            bottom: -0.5rem;
+            left: 0;
+            width: 100%;
+            height: 0.25rem;
+            background-color: #FF4500;
+        }
+    </style>
+</head>
+<body class="leading-relaxed">
+
+    <!-- Header & Navigation -->
+    <header id="header" class="fixed top-0 left-0 right-0 z-50 bg-[#111111]/80 backdrop-blur-sm">
+        <div class="container mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <a href="#home" class="text-2xl font-bold text-white transition-colors hover:text-[#FF4500]">
+                    DM.
+                </a>
+                
+                <!-- Desktop Navigation -->
+                <nav class="hidden md:flex items-center space-x-8">
+                    <a href="#home" class="nav-link text-sm font-medium transition-colors hover:text-[#FF4500] text-[#FF4500]">Home</a>
+                    <a href="#about" class="nav-link text-sm font-medium transition-colors hover:text-[#FF4500] text-gray-300">About</a>
+                    <a href="#certifications" class="nav-link text-sm font-medium transition-colors hover:text-[#FF4500] text-gray-300">Certifications</a>
+                    <a href="#experience" class="nav-link text-sm font-medium transition-colors hover:text-[#FF4500] text-gray-300">Experience</a>
+                    <a href="#projects" class="nav-link text-sm font-medium transition-colors hover:text-[#FF4500] text-gray-300">Projects</a>
+                    <a href="#skills" class="nav-link text-sm font-medium transition-colors hover:text-[#FF4500] text-gray-300">Skills</a>
+                    <a href="#education" class="nav-link text-sm font-medium transition-colors hover:text-[#FF4500] text-gray-300">Education</a>
+                    <a href="#contact" class="nav-link text-sm font-medium transition-colors hover:text-[#FF4500] text-gray-300">Contact</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <div class="md:hidden">
+                    <button id="menu-btn" class="text-gray-300 hover:text-white focus:outline-none">
+                        <!-- Menu Icon -->
+                        <svg id="menu-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="4" x2="20" y1="12" y2="12"/><line x1="4" x2="20" y1="6" y2="6"/><line x1="4" x2="20" y1="18" y2="18"/></svg>
+                        <!-- Close Icon -->
+                        <svg id="close-icon" xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="hidden"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+         <!-- Mobile Navigation Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-[#1a1a1a] py-4">
+            <nav class="flex flex-col items-center space-y-4">
+                <a href="#home" class="mobile-nav-link flex items-center gap-2 text-lg font-medium transition-colors hover:text-[#FF4500] text-gray-300">Home</a>
+                <a href="#about" class="mobile-nav-link flex items-center gap-2 text-lg font-medium transition-colors hover:text-[#FF4500] text-gray-300">About</a>
+                <a href="#certifications" class="mobile-nav-link flex items-center gap-2 text-lg font-medium transition-colors hover:text-[#FF4500] text-gray-300">Certifications</a>
+                <a href="#experience" class="mobile-nav-link flex items-center gap-2 text-lg font-medium transition-colors hover:text-[#FF4500] text-gray-300">Experience</a>
+                <a href="#projects" class="mobile-nav-link flex items-center gap-2 text-lg font-medium transition-colors hover:text-[#FF4500] text-gray-300">Projects</a>
+                <a href="#skills" class="mobile-nav-link flex items-center gap-2 text-lg font-medium transition-colors hover:text-[#FF4500] text-gray-300">Skills</a>
+                <a href="#education" class="mobile-nav-link flex items-center gap-2 text-lg font-medium transition-colors hover:text-[#FF4500] text-gray-300">Education</a>
+                <a href="#contact" class="mobile-nav-link flex items-center gap-2 text-lg font-medium transition-colors hover:text-[#FF4500] text-gray-300">Contact</a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="container mx-auto px-4 sm:px-6 lg:px-8 pt-20">
+        <!-- Home Section -->
+        <section id="home" class="min-h-screen flex items-center justify-center text-center -mt-20">
+            <div class="flex flex-col md:flex-row items-center gap-8 md:gap-12">
+                <div class="w-48 h-48 md:w-64 md:h-64 rounded-full overflow-hidden border-4 border-[#FF4500] shadow-lg">
+                    <img 
+                        src="profile-pic.jpg" 
+                        alt="Deepansh Maheshwari" 
+                        class="w-full h-full object-cover"
+                        onerror="this.onerror=null;this.src='https://placehold.co/256x256/1a1a1a/ffffff?text=DM';"
+                    />
+                </div>
+                <div class="text-center md:text-left">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white">
+                        Deepansh Maheshwari
+                    </h1>
+                    <p class="mt-4 text-lg sm:text-xl lg:text-2xl text-gray-300">
+                        Aspiring Full-Stack Developer
+                    </p>
+                    <p class="mt-2 text-md sm:text-lg text-gray-400">
+                        Passionate about building modern web applications.
+                    </p>
+                    <div class="mt-8 flex flex-wrap justify-center md:justify-start gap-4">
+                        <a href="#contact" class="bg-[#FF4500] text-white font-bold py-3 px-6 rounded-lg transition-transform hover:scale-105 shadow-lg">
+                            Get In Touch
+                        </a>
+                        <a href="https://github.com/d3-deepansh" target="_blank" rel="noopener noreferrer" class="bg-gray-700 text-white font-bold py-3 px-6 rounded-lg transition-transform hover:scale-105 shadow-lg">
+                            View GitHub
+                        </a>
+                        <a href="Deepansh_Maheshwari_Resume.pdf" download="Deepansh_Maheshwari_Resume.pdf" class="border-2 border-[#FF4500] text-[#FF4500] font-bold py-3 px-6 rounded-lg transition-all hover:bg-[#FF4500] hover:text-white shadow-lg flex items-center gap-2">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><polyline points="7 10 12 15 17 10"/><line x1="12" y1="15" x2="12" y2="3"/></svg>
+                            Download Resume
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section id="about" class="py-16 md:py-24 scroll-mt-20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white relative inline-block left-1/2 -translate-x-1/2">
+                    About Me
+                    <span class="title-underline"></span>
+                </h2>
+                <div class="bg-[#1a1a1a] p-8 rounded-lg shadow-2xl border border-gray-800">
+                    <p class="text-gray-300 text-lg text-center leading-relaxed">
+                       Aspiring Full-Stack Developer with hands-on experience in front-end development and a strong foundation in full-stack technologies. Proficient in React.js, JavaScript, Node.js, HTML5, CSS3, and Tailwind CSS. Adept at building responsive and user-centric web applications with a focus on clean design and performance. Demonstrated ability to collaborate with cross-functional teams, solve real-world problems, and continuously adapt through self-driven learning and certifications.
+                    </p>
+                </div>
+            </div>
+        </section>
+        
+        <!-- Certifications Section -->
+        <section id="certifications" class="py-16 md:py-24 scroll-mt-20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white relative inline-block left-1/2 -translate-x-1/2">
+                    Certifications & Courses
+                    <span class="title-underline"></span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div class="bg-[#1a1a1a] p-6 rounded-lg border border-gray-800 shadow-lg transition-all hover:border-[#FF4500] hover:shadow-xl">
+                        <h3 class="font-bold text-white text-lg">Learn Python Programming (Python 3)</h3>
+                        <p class="text-gray-400">Infosys Springboard</p>
+                    </div>
+                    <div class="bg-[#1a1a1a] p-6 rounded-lg border border-gray-800 shadow-lg transition-all hover:border-[#FF4500] hover:shadow-xl">
+                        <h3 class="font-bold text-white text-lg">HTML5</h3>
+                        <p class="text-gray-400">Coursera (University of Michigan)</p>
+                    </div>
+                    <div class="bg-[#1a1a1a] p-6 rounded-lg border border-gray-800 shadow-lg transition-all hover:border-[#FF4500] hover:shadow-xl">
+                        <h3 class="font-bold text-white text-lg">Learn React.js</h3>
+                        <p class="text-gray-400">Codecademy</p>
+                    </div>
+                    <div class="bg-[#1a1a1a] p-6 rounded-lg border border-gray-800 shadow-lg transition-all hover:border-[#FF4500] hover:shadow-xl">
+                        <h3 class="font-bold text-white text-lg">Deploying Front-End Apps with React</h3>
+                        <p class="text-gray-400">Coursera (IBM, Feb 2025)</p>
+                    </div>
+                     <div class="bg-[#1a1a1a] p-6 rounded-lg border border-gray-800 shadow-lg transition-all hover:border-[#FF4500] hover:shadow-xl md:col-span-2">
+                        <h3 class="font-bold text-white text-lg">Data Science Ethics</h3>
+                        <p class="text-gray-400">Coursera (University of Michigan)</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience Section -->
+        <section id="experience" class="py-16 md:py-24 scroll-mt-20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white relative inline-block left-1/2 -translate-x-1/2">
+                    Work Experience
+                    <span class="title-underline"></span>
+                </h2>
+                <div class="space-y-12">
+                    <div class="flex flex-col md:flex-row gap-6 p-6 bg-[#1a1a1a] rounded-lg border border-gray-800 shadow-lg transition-all hover:border-[#FF4500] hover:shadow-xl">
+                        <div class="md:w-1/4 text-gray-400">
+                            <p class="font-bold text-lg text-[#FF4500]">Web Developer</p>
+                            <p class="font-semibold text-white">VCREATEK CONSULTING SERVICES PVT LTD</p>
+                            <p>Pune</p>
+                            <p class="text-sm mt-1">Jan 2025 - Present</p>
+                        </div>
+                        <div class="md:w-3/4">
+                            <ul class="list-disc list-inside space-y-2 text-gray-300">
+                                <li>Developing scalable web applications using React.js and JavaScript.</li>
+                                <li>Collaborating with cross-functional teams for UI/UX improvements.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="flex flex-col md:flex-row gap-6 p-6 bg-[#1a1a1a] rounded-lg border border-gray-800 shadow-lg transition-all hover:border-[#FF4500] hover:shadow-xl">
+                        <div class="md:w-1/4 text-gray-400">
+                            <p class="font-bold text-lg text-[#FF4500]">Logistics Supervisor (Part-Time)</p>
+                            <p class="font-semibold text-white">Shree Ji Road Lines</p>
+                            <p>Kota</p>
+                            <p class="text-sm mt-1">Aug 2020 - Apr 2024</p>
+                        </div>
+                        <div class="md:w-3/4">
+                            <ul class="list-disc list-inside space-y-2 text-gray-300">
+                                <li>Managed goods inventory and supervised loading/unloading processes.</li>
+                                <li> Ensured regulatory compliance and accurate record-keeping through diligent management of Bilty, Challan, and E-way bills</li>
+                                <li>Strengthened client relationships and revenue cycles through direct engagement for payment collection and business development.</li>
+                                <!-- <li>Visited clients for payments and business coordination.</li> -->
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects" class="py-16 md:py-24 scroll-mt-20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white relative inline-block left-1/2 -translate-x-1/2">
+                    Projects
+                    <span class="title-underline"></span>
+                </h2>
+                <div class="grid md:grid-cols-2 gap-8">
+                    <div class="bg-[#1a1a1a] p-6 rounded-lg border border-gray-800 shadow-lg flex flex-col justify-between transition-transform hover:-translate-y-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Paradise Nursery Shopping Website</h3>
+                            <p class="text-gray-400 mb-4">A front-end shopping application built with React.js, providing a seamless user experience for browsing and purchasing plants.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gray-700 text-xs text-gray-200 px-2 py-1 rounded-full">React.js</span>
+                                <span class="bg-gray-700 text-xs text-gray-200 px-2 py-1 rounded-full">CSS</span>
+                                <span class="bg-gray-700 text-xs text-gray-200 px-2 py-1 rounded-full">JavaScript</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/d3-deepansh" target="_blank" rel="noopener noreferrer" class="text-[#FF4500] font-semibold flex items-center gap-2 self-start mt-auto transition-colors hover:text-white">
+                            View on GitHub <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        </a>
+                    </div>
+                    <div class="bg-[#1a1a1a] p-6 rounded-lg border border-gray-800 shadow-lg flex flex-col justify-between transition-transform hover:-translate-y-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Rajasthan Farming Website</h3>
+                            <p class="text-gray-400 mb-4">An informational site featuring crop data, weather information, and details on government schemes for farmers in Rajasthan.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gray-700 text-xs text-gray-200 px-2 py-1 rounded-full">HTML</span>
+                                <span class="bg-gray-700 text-xs text-gray-200 px-2 py-1 rounded-full">CSS</span>
+                                <span class="bg-gray-700 text-xs text-gray-200 px-2 py-1 rounded-full">JavaScript</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/d3-deepansh" target="_blank" rel="noopener noreferrer" class="text-[#FF4500] font-semibold flex items-center gap-2 self-start mt-auto transition-colors hover:text-white">
+                            View on GitHub <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        </a>
+                    </div>
+                    <div class="bg-[#1a1a1a] p-6 rounded-lg border border-gray-800 shadow-lg flex flex-col justify-between transition-transform hover:-translate-y-2">
+                        <div>
+                            <h3 class="text-xl font-bold text-white mb-2">Personal  website </h3>
+                            <p class="text-gray-400 mb-4">Designed and built a sleek, single-page personal portfolio with a mobile-first approach using React and tailwind creating a modern and user-friendly experience.</p>
+                            <div class="flex flex-wrap gap-2 mb-4">
+                                <span class="bg-gray-700 text-xs text-gray-200 px-2 py-1 rounded-full">React.js</span>
+                                <span class="bg-gray-700 text-xs text-gray-200 px-2 py-1 rounded-full">Tailwind.CSS</span>
+                                <span class="bg-gray-700 text-xs text-gray-200 px-2 py-1 rounded-full">JavaScript</span>
+                            </div>
+                        </div>
+                        <a href="https://github.com/d3-deepansh" target="_blank" rel="noopener noreferrer" class="text-[#FF4500] font-semibold flex items-center gap-2 self-start mt-auto transition-colors hover:text-white">
+                            View on GitHub <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/><polyline points="15 3 21 3 21 9"/><line x1="10" y1="14" x2="21" y2="3"/></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section id="skills" class="py-16 md:py-24 scroll-mt-20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white relative inline-block left-1/2 -translate-x-1/2">
+                    My Skills
+                    <span class="title-underline"></span>
+                </h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <div class="bg-[#1a1a1a] p-6 rounded-lg border border-gray-800 shadow-lg">
+                        <h3 class="text-lg font-bold text-[#FF4500] mb-4">Languages</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-gray-700 text-gray-200 px-3 py-1.5 text-sm rounded-md shadow-sm">Python</span>
+                            <span class="bg-gray-700 text-gray-200 px-3 py-1.5 text-sm rounded-md shadow-sm">C</span>
+                            <span class="bg-gray-700 text-gray-200 px-3 py-1.5 text-sm rounded-md shadow-sm">JavaScript</span>
+                        </div>
+                    </div>
+                    <div class="bg-[#1a1a1a] p-6 rounded-lg border border-gray-800 shadow-lg">
+                        <h3 class="text-lg font-bold text-[#FF4500] mb-4">Web Technologies</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-gray-700 text-gray-200 px-3 py-1.5 text-sm rounded-md shadow-sm">HTML5</span>
+                            <span class="bg-gray-700 text-gray-200 px-3 py-1.5 text-sm rounded-md shadow-sm">CSS3</span>
+                            <span class="bg-gray-700 text-gray-200 px-3 py-1.5 text-sm rounded-md shadow-sm">Tailwind CSS</span>
+                            <span class="bg-gray-700 text-gray-200 px-3 py-1.5 text-sm rounded-md shadow-sm">React.js</span>
+                            <span class="bg-gray-700 text-gray-200 px-3 py-1.5 text-sm rounded-md shadow-sm">Node.js</span>
+                        </div>
+                    </div>
+                    <div class="bg-[#1a1a1a] p-6 rounded-lg border border-gray-800 shadow-lg">
+                        <h3 class="text-lg font-bold text-[#FF4500] mb-4">Database</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-gray-700 text-gray-200 px-3 py-1.5 text-sm rounded-md shadow-sm">MySQL</span>
+                        </div>
+                    </div>
+                    <div class="bg-[#1a1a1a] p-6 rounded-lg border border-gray-800 shadow-lg">
+                        <h3 class="text-lg font-bold text-[#FF4500] mb-4">Tools & Software</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-gray-700 text-gray-200 px-3 py-1.5 text-sm rounded-md shadow-sm">Visual Studio Code</span>
+                            <span class="bg-gray-700 text-gray-200 px-3 py-1.5 text-sm rounded-md shadow-sm">Cursor</span>
+                            <span class="bg-gray-700 text-gray-200 px-3 py-1.5 text-sm rounded-md shadow-sm">MS Office</span>
+                        </div>
+                    </div>
+                     <div class="bg-[#1a1a1a] p-6 rounded-lg border border-gray-800 shadow-lg">
+                        <h3 class="text-lg font-bold text-[#FF4500] mb-4">Soft Skills</h3>
+                        <div class="flex flex-wrap gap-3">
+                            <span class="bg-gray-700 text-gray-200 px-3 py-1.5 text-sm rounded-md shadow-sm">Effective Communication</span>
+                             <span class="bg-gray-700 text-gray-200 px-3 py-1.5 text-sm rounded-md shadow-sm">Team Collaboration</span>
+                            <span class="bg-gray-700 text-gray-200 px-3 py-1.5 text-sm rounded-md shadow-sm">Problem Solving</span>
+                             <span class="bg-gray-700 text-gray-200 px-3 py-1.5 text-sm rounded-md shadow-sm">Time Management</span>
+                             <span class="bg-gray-700 text-gray-200 px-3 py-1.5 text-sm rounded-md shadow-sm">Fast Learner</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+<!-- Education Section -->
+<section id="education" class="py-16 md:py-24 scroll-mt-20">
+    <div class="max-w-4xl mx-auto">
+        <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white relative inline-block left-1/2 -translate-x-1/2">
+            My Education
+            <span class="title-underline"></span>
+        </h2>
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <!-- MCA Card -->
+            <div class="bg-[#1a1a1a] p-6 rounded-lg border border-gray-800 shadow-lg transition-all hover:border-[#FF4500] hover:shadow-xl">
+                <p class="font-bold text-lg text-[#FF4500]">Master of Computer Applications (MCA)</p>
+                <p class="font-semibold text-white mt-1">Chandigarh University, Chandigarh</p>
+                <p class="text-sm text-gray-400 mt-1">Apr 2025 – May 2027</p>
+            </div>
+
+            <!-- BCA Card -->
+            <div class="bg-[#1a1a1a] p-6 rounded-lg border border-gray-800 shadow-lg transition-all hover:border-[#FF4500] hover:shadow-xl">
+                <p class="font-bold text-lg text-[#FF4500]">Bachelor of Computer Applications (BCA)</p>
+                <p class="font-semibold text-white mt-1">Aklank College, Kota</p>
+                <p class="text-sm text-gray-400 mt-1">Apr 2022 – Mar 2025</p>
+            </div>
+
+            <!-- Higher Secondary Card -->
+            <div class="bg-[#1a1a1a] p-6 rounded-lg border border-gray-800 shadow-lg transition-all hover:border-[#FF4500] hover:shadow-xl">
+                <p class="font-bold text-lg text-[#FF4500]">Senior Secondary (Agriculture)</p>
+                <p class="font-semibold text-white mt-1">New Public School, Kota (RBSE)</p>
+                <p class="text-sm text-gray-400 mt-1">Completed: Mar 2020</p>
+            </div>
+
+            <!-- Class 10th Card -->
+            <div class="bg-[#1a1a1a] p-6 rounded-lg border border-gray-800 shadow-lg transition-all hover:border-[#FF4500] hover:shadow-xl">
+                <p class="font-bold text-lg text-[#FF4500]">Class 10th (CBSE)</p>
+                <p class="font-semibold text-white mt-1">Decent Public School, Kota</p>
+                <p class="text-sm text-gray-400 mt-1">Completed: Mar 2018</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="py-16 md:py-24 scroll-mt-20">
+            <div class="max-w-4xl mx-auto">
+                <h2 class="text-3xl md:text-4xl font-bold text-center mb-12 text-white relative inline-block left-1/2 -translate-x-1/2">
+                    Get In Touch
+                    <span class="title-underline"></span>
+                </h2>
+                <div class="text-center max-w-2xl mx-auto">
+                    <p class="text-gray-300 mb-8 text-lg">
+                        I'm currently seeking new opportunities and would love to hear from you. Whether you have a question or just want to say hi, feel free to reach out.
+                    </p>
+                    <div class="flex flex-col sm:flex-row justify-center items-center gap-6 mb-12">
+                        <a href="mailto:deepansh048@gmail.com" class="bg-[#FF4500] text-white font-bold py-4 px-8 rounded-lg text-lg transition-transform hover:scale-105 shadow-lg flex items-center gap-3">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect width="20" height="16" x="2" y="4" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+                            deepansh048@gmail.com
+                        </a>
+                         <a href="tel:+919521400703" class="bg-gray-700 text-white font-bold py-4 px-8 rounded-lg text-lg transition-transform hover:scale-105 shadow-lg">
+                            +91 9521400703
+                        </a>
+                    </div>
+        
+                    <div class="border-t border-gray-800 my-8"></div>
+        
+                    <p class="text-gray-300 mb-6 text-lg">Find me on</p>
+                    <div class="flex justify-center items-center gap-8">
+                        <a href="https://github.com/d3-deepansh" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-transform hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M15 22v-4a4.8 4.8 0 0 0-1-3.5c3 0 6-2 6-5.5.08-1.25-.27-2.48-1-3.5.28-1.15.28-2.35 0-3.5 0 0-1 0-3 1.5-2.64-.5-5.36-.5-8 0C6 2 5 2 5 2c-.3 1.15-.3 2.35 0 3.5A5.403 5.403 0 0 0 4 9c0 3.5 3 5.5 6 5.5-.39.49-.68 1.05-.85 1.65-.17.6-.22 1.23-.15 1.85v4"/></svg>
+                        </a>
+                        <a href="https://www.linkedin.com/in/deepansh-maheshwari" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-transform hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect width="4" height="12" x="2" y="9"/><circle cx="4" cy="4" r="2"/></svg>
+                        </a>
+                        <a href="https://www.instagram.com/deepansh_d3?igsh=aW5odHBoOGprZnEx" target="_blank" rel="noopener noreferrer" class="text-gray-400 hover:text-white transition-transform hover:scale-110">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line></svg>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="py-8 bg-[#0a0a0a] border-t border-gray-800 mt-20">
+        <div class="container mx-auto text-center text-gray-500 text-sm">
+            <p>&copy; 2025 Deepansh Maheshwari. All Rights Reserved.</p>
+            <p class="mt-2">Built with React & Tailwind CSS</p>
+        </div>
+    </footer>
+
+    <script>
+        // --- This script handles all the interactivity for the page ---
+
+        // Mobile Menu Toggle
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        const menuIcon = document.getElementById('menu-icon');
+        const closeIcon = document.getElementById('close-icon');
+        const mobileNavLinks = document.querySelectorAll('.mobile-nav-link');
+
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+            menuIcon.classList.toggle('hidden');
+            closeIcon.classList.toggle('hidden');
+        });
+        
+        // Close mobile menu when a link is clicked
+        mobileNavLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+                menuIcon.classList.remove('hidden');
+                closeIcon.classList.add('hidden');
+            });
+        });
+
+        // Active Nav Link Highlighting on Scroll
+        const sections = document.querySelectorAll('section');
+        const navLinks = document.querySelectorAll('.nav-link');
+        
+        window.addEventListener('scroll', () => {
+            let current = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                if (pageYOffset >= sectionTop - 100) {
+                    current = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('text-[#FF4500]');
+                link.classList.add('text-gray-300');
+                if (link.getAttribute('href').includes(current)) {
+                    link.classList.add('text-[#FF4500]');
+                    link.classList.remove('text-gray-300');
+                }
+            });
+        });
+    </script>
+</body>
+</html>
