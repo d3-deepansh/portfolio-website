@@ -1,0 +1,16 @@
+{
+  "name": "Sleek Dark Teal",
+  "dataColors": ["#1ECBE1", "#D36B9F", "#139AA8", "#A4507A", "#253342"],
+  "background": "#1B2430",
+  "foreground": "#E2F1F5",
+  "tableAccent": "#1ECBE1",
+  "visualStyles": {
+    "*": {
+      "*": {
+        "background": [{ "show": true, "color": { "solid": { "color": "#253342" } } }],
+        "border": [{ "show": true, "color": { "solid": { "color": "#2C3E52" } }, "radius": 8 }],
+        "dropShadow": [{ "show": true, "color": { "solid": { "color": "#000000" } }, "position": "Outer", "preset": "BottomRight" }]
+      }
+    }
+  }
+}
